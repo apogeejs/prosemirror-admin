@@ -1,4 +1,4 @@
-import { Plugin } from '/prosemirror-admin/dist/prosemirror-state.es.js';
+import { Plugin } from '/apogeejs-releases/releases/ext/prosemirror-state/v1.3.3/prosemirror-state.es.js';
 
 var base = {
   8: "Backspace",

@@ -1,7 +1,7 @@
-import { keydownHandler } from '/prosemirror-admin/dist/prosemirror-keymap.es.js';
-import { Selection, NodeSelection, Plugin, TextSelection } from '/prosemirror-admin/dist/prosemirror-state.es.js';
-import { DecorationSet, Decoration } from '/prosemirror-admin/dist/prosemirror-view.es.js';
-import { Slice } from '/prosemirror-admin/dist/prosemirror-model.es.js';
+import { keydownHandler } from '/apogeejs-releases/releases/ext/prosemirror-keymap/v1.1.4/prosemirror-keymap.es.js';
+import { Selection, NodeSelection, Plugin, TextSelection } from '/apogeejs-releases/releases/ext/prosemirror-state/v1.3.3/prosemirror-state.es.js';
+import { DecorationSet, Decoration } from '/apogeejs-releases/releases/ext/prosemirror-view/v1.14.13/prosemirror-view.es.js';
+import { Slice } from '/apogeejs-releases/releases/ext/prosemirror-model/v1.10.0/prosemirror-model.es.js';
 
 // ::- Gap cursor selections are represented using this class. Its
 // `$anchor` and `$head` properties both point at the cursor position.

@@ -17,6 +17,7 @@
   "scripts": {
     "buildextlib": "rollup --config rollup.extlibconfig.js",
     "buildlib": "rollup --config rollup.libconfig.js",
+    "buildlibrelease": "rollup --config rollup.libconfig.release.js",
     "packagecss": "gulp release"
   }
 }

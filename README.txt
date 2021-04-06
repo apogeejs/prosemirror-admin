@@ -51,3 +51,11 @@ associated repo. This is to give it a better name.
 
 NOTE - on all repos, my first change was June 17, 2020. I don't have any of their changes after this date. (Note, I didn't check
 that I have all their changes up to that date. The cutoff may be a few days earlier.)
+
+
+
+***NEW***
+
+3) To put the libs in the release directory, run the command:
+
+npm run-script buildlibrelease

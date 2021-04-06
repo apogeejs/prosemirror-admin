@@ -1,6 +1,6 @@
-import { TextSelection, Selection, NodeSelection } from '/prosemirror-admin/dist/prosemirror-state.es.js';
-import { DOMSerializer, Fragment, Mark, DOMParser, Slice } from '/prosemirror-admin/dist/prosemirror-model.es.js';
-import { dropPoint } from '/prosemirror-admin/dist/prosemirror-transform.es.js';
+import { TextSelection, Selection, NodeSelection } from '/apogeejs-releases/releases/ext/prosemirror-state/v1.3.3/prosemirror-state.es.js';
+import { DOMSerializer, Fragment, Mark, DOMParser, Slice } from '/apogeejs-releases/releases/ext/prosemirror-model/v1.10.0/prosemirror-model.es.js';
+import { dropPoint } from '/apogeejs-releases/releases/ext/prosemirror-transform/v1.2.6/prosemirror-transform.es.js';
 
 const result = {};
 
@@ -2884,7 +2884,6 @@ class DOMObserver {
   }
 
   start() {
-if(window.START_OFF_FLAG) return;
     if (this.observer)
       this.observer.observe(this.view.dom, observeOptions);
     if (useCharData)
@@ -3374,10 +3373,8 @@ class MouseDown {
 
     let pos = this.pos;
     if (this.view.state.doc != this.startDoc) pos = this.view.posAtCoords(eventCoords(event));
-//////////////////////////////////////////////////////////////    
-    if (/*this.allowDefault ||*/ !pos) {
-    //if (this.allowDefault || !pos) {
-///////////////////////////////////////////////////////////////
+
+    if (this.allowDefault || !pos) {
       setSelectionOrigin(this.view, "pointer");
     } else if (handleSingleClick(this.view, pos.pos, pos.inside, event, this.selectNode)) {
       event.preventDefault();

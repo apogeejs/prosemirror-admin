@@ -1,5 +1,5 @@
-import { Slice, Fragment, Mark, Node } from '/prosemirror-admin/dist/prosemirror-model.es.js';
-import { ReplaceStep, ReplaceAroundStep, Transform } from '/prosemirror-admin/dist/prosemirror-transform.es.js';
+import { Slice, Fragment, Mark, Node } from '/apogeejs-releases/releases/ext/prosemirror-model/v1.10.0/prosemirror-model.es.js';
+import { ReplaceStep, ReplaceAroundStep, Transform } from '/apogeejs-releases/releases/ext/prosemirror-transform/v1.2.6/prosemirror-transform.es.js';
 
 const classesById = Object.create(null);
 

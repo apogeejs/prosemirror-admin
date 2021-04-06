@@ -1,4 +1,4 @@
-import { ReplaceError, Slice, Fragment, MarkType } from '/prosemirror-admin/dist/prosemirror-model.es.js';
+import { ReplaceError, Slice, Fragment, MarkType } from '/apogeejs-releases/releases/ext/prosemirror-model/v1.10.0/prosemirror-model.es.js';
 
 // Mappable:: interface
 // There are several things that positions can be mapped through.
