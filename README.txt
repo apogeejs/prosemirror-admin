@@ -1,61 +1,70 @@
 Prosemirror Lib
 ------------
 
-Inside the prosemirror lib directory, the following prosemirror repositories should be placed:
+Inside the prosemirror admin directory, we have some code to help work with the prosemirror.
+
+The following libraries are used in the application (as of 4/6/21)
 
 prosemirror-commands
-prosemirror-dropcursor
-prosemirror-example-setup
 prosemirror-gapcursor
-prosemirror-history
-prosemirror-inputrules
 prosemirror-keymap
-prosemirror-menu
 prosemirror-model
-prosemirror-schema-basic
-prosemirror-schema-list
 prosemirror-state
 prosemirror-transform
 prosemirror-view
 
-This is used a forked version of the prose mirror repositories in the account sutter-dave.
+CONVERSION OF LIBRARIES TO ES MODULES:
+-------------------------------------
 
-In addition to any code changes, there are changes to the import statements to make them compatible with
-standard es module notation. The main repositories use notation for bundlers.
+We are publishing the needed prose mirror libraries as es modules so we can use them in our es builds. We 
+will store the 3 lib files along with a css file and a "manifest" file that tells which versions of the prosemirror
+libraries are included.
 
-IMPORT STATEMENT CHANGES:
+Because ES modules require we specify exact URLs, we must reference a given library with the same URL everywhere we use it.
+To make sure we do this, we are publishing the group of lib files together in a single bundle.
 
-1) For external links in the repositories, it uses notation that
-is used by the bundler, for example: import {Node} from "prosemirror-model".
+BUILDING THE MODULES
 
-For es modules, we need to have a proper URL. We have updated these to use the proper URL pointing at the library in the 
-dist directory, both for the proermirror libs and the external libs.
+In the directory "releaseimports" we have some stubs to convert the npm modules to es modules,
+using rollup. To do this:
 
-2) For internal links in the repositories, it uses the notation: import {xxx} from "./module", leaving off the 
-file extension. IN these cases we added the ".js" extension in the import statement.
+1) set the desired versions of the prose mirror libraries in the package.json file and install. 
+2) update the destination for the created files, so they are placed in a properly versioned directory.
+3) run the command:
 
-To fix this is the build environment, imported modules with not extension automatically have ".js" appended.
+npm run-script buildlib
 
-ADDITIONAL WORK IN BUILDING THIS DIRECTORY STRUTURE
+4) Insert the prosemirrorVersions.json file, to say which versions are in the bundle.
+5) Add the appropriate CSS file to the release directory
 
-1) external links were packaged from npm and placed in the dist directory. This is done by running the command:
+This should create the output ES modules.
+
+NOTE: MAKE SURE YOU WRITE THEM TO THE PROPER DIRECTORY - A NEW BUNDLED VERSION! DON'T OVERWRITE AN OLD VERSION.
+
+DEBUGGING WITH REPOS
+--------------------
+
+(As of now, the repos are out of date.)
+
+If we want to run the code using prose mirror source for debugging, we can use an alternate set of libraries.
+
+1) Download the prosemirror repos needed into the child repos folder. Make sure the es modeuls stubs in the folder
+devimports points at these properly.
+2) The prosemirror repos are in ES format, but not standard format. Check the import statements. These can be updated our,
+more convenently, the server can be setup to serve these files.
+3) External libraries are needed. These can be made with ES stubs in extLib. Set that up for the needed modules. They should be
+downloaded into node_modules if we have the proper prosemirror lib versions loaded in our package.json. These libs can be built with
 
 npm run-script buildextlib
 
-The package.json file was given the proper dependencies and the rollup.libconfig.js and associated files were constructed
-to produce the modules in es module format.
+4) Update the apogee code to point to the proper prosemirror es stubs, in the devimports directory.
 
-2) Also in the dist directory, for each prosemirror lib, a es module was placed that re-exports the module from the
-associated repo. This is to give it a better name.
+Now when we run the web version of apogee it should load these files.
 
+Updating the CSS file
+---------------------
 
-NOTE - on all repos, my first change was June 17, 2020. I don't have any of their changes after this date. (Note, I didn't check
-that I have all their changes up to that date. The cutoff may be a few days earlier.)
+For my original version of prosemirror libs, I compiled the CSS files and then I modified it. I did not change this (so far)
+for other builds. 
 
-
-
-***NEW***
-
-3) To put the libs in the release directory, run the command:
-
-npm run-script buildlibrelease
+If updating is desired. See the gule file to help with compiling these.

@@ -20,12 +20,12 @@ export default [
 		],
 		output: [
 			{
-				file: '../apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-commands.es.js', 
+				file: '../apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-commands.es.js', 
 				format: 'es',
 				paths: {
-					"prosemirror-model": "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-model.es.js",
-					"prosemirror-state": "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-state.es.js",
-					"prosemirror-transform" : "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-transform.es.js",
+					"prosemirror-model": "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-model.es.js",
+					"prosemirror-state": "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-state.es.js",
+					"prosemirror-transform" : "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-transform.es.js",
 				}
 			}
 		],
@@ -45,13 +45,13 @@ export default [
 		],
 		output: [
 			{
-				file: '../apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-gapcursor.es.js', 
+				file: '../apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-gapcursor.es.js', 
 				format: 'es',
 				paths: {
-					"prosemirror-keymap": "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-keymap.es.js",
-					"prosemirror-model": "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-model.es.js",
-					"prosemirror-state": "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-state.es.js",
-					"prosemirror-view" : "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-view.es.js"
+					"prosemirror-keymap": "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-keymap.es.js",
+					"prosemirror-model": "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-model.es.js",
+					"prosemirror-state": "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-state.es.js",
+					"prosemirror-view" : "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-view.es.js"
 				}
 			}
 		],
@@ -68,10 +68,10 @@ export default [
 		],
 		output: [
 			{
-				file: '../apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-keymap.es.js', 
+				file: '../apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-keymap.es.js', 
 				format: 'es',
 				paths: {
-					"prosemirror-state": "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-state.es.js"
+					"prosemirror-state": "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-state.es.js"
 				}
 			}
 		],
@@ -85,7 +85,7 @@ export default [
 		input: 'releaseimports/prosemirror-model.es.js',
 		output: [
 			{
-				file: '../apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-model.es.js',
+				file: '../apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-model.es.js',
 				format: 'es'
 			}
 		],
@@ -103,11 +103,11 @@ export default [
 		],
 		output: [
 			{
-				file: '../apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-state.es.js',
+				file: '../apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-state.es.js',
 				format: 'es',
 				paths: {
-					"prosemirror-model": "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-model.es.js",
-					"prosemirror-transform" : "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-transform.es.js"
+					"prosemirror-model": "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-model.es.js",
+					"prosemirror-transform" : "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-transform.es.js"
 				}
 			}
 		],
@@ -124,10 +124,10 @@ export default [
 		],
 		output: [
 			{
-				file: '../apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-transform.es.js',
+				file: '../apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-transform.es.js',
 				format: 'es',
 				paths: {
-					"prosemirror-model": "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-model.es.js"
+					"prosemirror-model": "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-model.es.js"
 				}
 			}
 		],
@@ -146,12 +146,12 @@ export default [
 		],
 		output: [
 			{
-				file: '../apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-view.es.js', 
+				file: '../apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-view.es.js', 
 				format: 'es',
 				paths: {
-					"prosemirror-model": "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-model.es.js",
-					"prosemirror-state": "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-state.es.js",
-					"prosemirror-transform" : "/apogeejs-releases/releases/ext/prosemirror/a2.0.0/prosemirror-transform.es.js"
+					"prosemirror-model": "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-model.es.js",
+					"prosemirror-state": "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-state.es.js",
+					"prosemirror-transform" : "/apogeejs-releases/releases/ext/prosemirror/a1.0.0/prosemirror-transform.es.js"
 				}
 			}
 		],
